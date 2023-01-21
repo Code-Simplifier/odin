@@ -25,7 +25,6 @@ import { AiOutlineArrowRight, AiOutlinePlus } from "react-icons/ai"
 import { MdOutlineContentCopy } from "react-icons/md"
 
 import { Lato, Rubik } from '@next/font/google'
-import Login from './Login'
 
 
 const lato_semibold = Lato({ weight: '700', subsets: ['latin'] })
