@@ -176,7 +176,7 @@ export default function Home() {
 
     const messages = chatLogNew.map((message) => message.message).join("\n")
 
-    const response = await fetch("https://cs-odin.onrender.com/", {
+    const response = await fetch("https://cs-odin-server.vercel.app/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -218,7 +218,9 @@ export default function Home() {
               <Box>
                 <form onSubmit={handleSubmit}>
                   <InputGroup>
-                    <InputLeftElement pointerEvents="none" children={<Icon as={IoChatbubble} color="teal.100" boxSize={5} />} />
+                    <InputLeftElement pointerEvents="none">
+                      <Icon as={IoChatbubble} color="teal.100" boxSize={5} />
+                    </InputLeftElement>
                     <Input
                       placeholder='Ask Odin'
                       variant="outline"
@@ -232,7 +234,9 @@ export default function Home() {
                       _focus={{ boxShadow: "0 0 20px #45f3ff", borderColor: "teal.200" }}
                       fontFamily={chat.style.fontFamily}
                     />
-                    <InputRightElement onClick={handleSubmit} _hover={{ cursor: "pointer" }} pointerEvents="none" children={<Icon as={AiOutlineArrowRight} color="teal.100" boxSize={5} />} />
+                    <InputRightElement onClick={handleSubmit} _hover={{ cursor: "pointer" }} pointerEvents="none">
+                      <Icon as={AiOutlineArrowRight} color="teal.100" boxSize={5} />
+                    </InputRightElement>
                   </InputGroup>
                 </form>
               </Box>
